@@ -3,6 +3,9 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nextjs-app
+    overwrite: true
+file_exists_behavior: OVERWRITE
+
 permissions:
   - object: scripts
     pattern: "**"
