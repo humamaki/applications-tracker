@@ -3,7 +3,12 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nextjs-app
-
+permissions:
+  - object: scripts
+    pattern: "**"
+    mode: 755
+    type:
+      - file
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
